@@ -1,4 +1,7 @@
-export default function SearchPosts({ searchQuery, setSearchQuery }) {
+import { usePosts } from "./PostProvider";
+
+export default function SearchPosts() {
+  const { searchQuery, setSearchQuery } = usePosts();
   return (
     <input
       value={searchQuery}
